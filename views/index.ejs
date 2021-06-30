@@ -17,7 +17,7 @@
                   <ul class="glide__slides">
                     <li class="glide__slide">
                         <div class="click-zoom">
-                            <label>
+                            <label class="image-wrap">
                             <input type="checkbox">
                             <img class="img-fluid" src="https://images.pexels.com/photos/1741205/pexels-photo-1741205.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260">
                             </label>
@@ -25,7 +25,7 @@
                     </li>
                     <li class="glide__slide">
                         <div class="click-zoom">
-                            <label>
+                            <label class="image-wrap">
                                 <input type="checkbox">
                                 <img class="img-fluid" src="https://images.pexels.com/photos/1170986/pexels-photo-1170986.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
                             </label>
@@ -33,7 +33,7 @@
                     </li>
                     <li class="glide__slide">
                         <div class="click-zoom">
-                            <label>
+                            <label class="image-wrap">
                                 <input type="checkbox">
                                 <img class="img-fluid" src="https://images.pexels.com/photos/1056251/pexels-photo-1056251.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
                             </label>
@@ -41,7 +41,7 @@
                     </li>
                     <li class="glide__slide">
                         <div class="click-zoom">
-                            <label>
+                            <label class="image-wrap">
                                 <input type="checkbox">
                                 <img class="img-fluid" src="https://images.pexels.com/photos/982865/pexels-photo-982865.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
                             </label>
@@ -49,7 +49,7 @@
                     </li>
                     <li class="glide__slide">
                         <div class="click-zoom">
-                            <label>
+                            <label class="image-wrap">
                                 <input type="checkbox">
                                 <img class="img-fluid" src="https://images.pexels.com/photos/821736/pexels-photo-821736.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
                             </label>
@@ -87,6 +87,64 @@
             transform: scale(2);
             cursor: zoom-out
         }
+
+        .image-wrap {
+            width: 100%;
+            height: 50vw;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .image-wrap img {
+            width: 100%;
+            animation: move 40s ease;
+            /* Add infinite to loop. */
+            
+            -ms-animation: move 40s ease;
+            -webkit-animation: move 40s ease;
+            -0-animation: move 40s ease;
+            -moz-animation: move 40s ease;
+            position: absolute;
+        }
+
+        @-webkit-keyframes move {
+        0% {
+            -webkit-transform-origin: bottom left;
+            -moz-transform-origin: bottom left;
+            -ms-transform-origin: bottom left;
+            -o-transform-origin: bottom left;
+            transform-origin: bottom left;
+            transform: scale(1.0);
+            -ms-transform: scale(1.0);
+            /* IE 9 */
+            
+            -webkit-transform: scale(1.0);
+            /* Safari and Chrome */
+            
+            -o-transform: scale(1.0);
+            /* Opera */
+            
+            -moz-transform: scale(1.0);
+            /* Firefox */
+        }
+        100% {
+            transform: scale(1.2);
+            -ms-transform: scale(1.2);
+            /* IE 9 */
+            
+            -webkit-transform: scale(1.2);
+            /* Safari and Chrome */
+            
+            -o-transform: scale(1.2);
+            /* Opera */
+            
+            -moz-transform: scale(1.2);
+            /* Firefox */
+        }
+        }
+
+        
 
     </style>
 </body>
