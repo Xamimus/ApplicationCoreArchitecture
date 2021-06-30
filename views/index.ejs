@@ -7,8 +7,19 @@
 <body>
     <ul>
         <% for(var i=0; i<photos.length; i++) {%>
-            <li><%= photos[i].name %></li>
+            <li>
+                <img src="upload/<%=photos[i].image%>" alt="Description">
+            </li>
         <% } %>
     </ul>
+
+    <form action="/upload" method="post" enctype="multipart/form-data">
+
+        <input type="text" name="description">
+        <input type="file" name="image" accept="image/*">
+        <button type="submit">Envoyer</button>
+
+    </form>
+
 </body>
 </html>
