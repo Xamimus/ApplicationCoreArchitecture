@@ -6,3 +6,9 @@ body {
 a {
   color: #00B7FF;
 }
+
+img:active
+{
+   transform: scale(1.2);
+   transition: 1s;
+}
