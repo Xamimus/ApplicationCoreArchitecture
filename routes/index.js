@@ -27,13 +27,13 @@ MongoClient.connect(
 
     router.get('/', function(req, res, next) {
       photos.find().toArray((err, items) => {
-        res.render('index', { title: 'Express', photos: items });
-      })
+        res.render('index', { title: 'Carrousel', photos: items });
+      });
     });
 
     router.get('/upload', (req, res, next) => {
       res.redirect('/');
-    })
+    });
 
     router.post('/upload', upload.single('image'), (req, res, next) => {
       photos.insertOne({"image": req.file.originalname})
