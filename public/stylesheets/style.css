@@ -51,3 +51,9 @@ a {
     text-align: center;
     color: white;
 }
+
+.top-button {
+    position: fixed;
+    top: 1em;
+    right: 1em;
+}
